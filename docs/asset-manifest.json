@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/bitso-activity/static/js/main.c1c96675.chunk.js",
-    "main.js.map": "/bitso-activity/static/js/main.c1c96675.chunk.js.map",
-    "runtime-main.js": "/bitso-activity/static/js/runtime-main.88ec4c76.js",
-    "runtime-main.js.map": "/bitso-activity/static/js/runtime-main.88ec4c76.js.map",
-    "static/js/2.f70b84d9.chunk.js": "/bitso-activity/static/js/2.f70b84d9.chunk.js",
-    "static/js/2.f70b84d9.chunk.js.map": "/bitso-activity/static/js/2.f70b84d9.chunk.js.map",
-    "static/js/3.7169ea6f.chunk.js": "/bitso-activity/static/js/3.7169ea6f.chunk.js",
-    "static/js/3.7169ea6f.chunk.js.map": "/bitso-activity/static/js/3.7169ea6f.chunk.js.map",
+    "main.js": "/bitso-activity/static/js/main.cdbfa59b.chunk.js",
+    "main.js.map": "/bitso-activity/static/js/main.cdbfa59b.chunk.js.map",
+    "runtime-main.js": "/bitso-activity/static/js/runtime-main.21bf1203.js",
+    "runtime-main.js.map": "/bitso-activity/static/js/runtime-main.21bf1203.js.map",
+    "static/js/2.2145efc7.chunk.js": "/bitso-activity/static/js/2.2145efc7.chunk.js",
+    "static/js/2.2145efc7.chunk.js.map": "/bitso-activity/static/js/2.2145efc7.chunk.js.map",
+    "static/js/3.2b4b7da7.chunk.js": "/bitso-activity/static/js/3.2b4b7da7.chunk.js",
+    "static/js/3.2b4b7da7.chunk.js.map": "/bitso-activity/static/js/3.2b4b7da7.chunk.js.map",
     "index.html": "/bitso-activity/index.html",
-    "static/js/2.f70b84d9.chunk.js.LICENSE.txt": "/bitso-activity/static/js/2.f70b84d9.chunk.js.LICENSE.txt"
+    "static/js/2.2145efc7.chunk.js.LICENSE.txt": "/bitso-activity/static/js/2.2145efc7.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.88ec4c76.js",
-    "static/js/2.f70b84d9.chunk.js",
-    "static/js/main.c1c96675.chunk.js"
+    "static/js/runtime-main.21bf1203.js",
+    "static/js/2.2145efc7.chunk.js",
+    "static/js/main.cdbfa59b.chunk.js"
   ]
 }

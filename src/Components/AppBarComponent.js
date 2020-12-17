@@ -3,10 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import FormatAlignLeftIcon from '@material-ui/icons/FormatAlignLeft';
-import FormatAlignCenterIcon from '@material-ui/icons/FormatAlignCenter';
-import FormatAlignRightIcon from '@material-ui/icons/FormatAlignRight';
-import FormatAlignJustifyIcon from '@material-ui/icons/FormatAlignJustify';
 import ToggleButton from '@material-ui/lab/ToggleButton';
 import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
 
@@ -29,13 +25,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function AppBarComponent() {
-  const [_period, setPeriod] = React.useState(10);
-
-  const handlePeriod = (event, newPeriod) => {
-    setPeriod(newPeriod);
-  };
-
+export default function AppBarComponent(props) {
   const classes = useStyles();
 
   return (
@@ -46,14 +36,11 @@ export default function AppBarComponent() {
             Bitso Activity
           </Typography>
           <ToggleButtonGroup
-            value={_period}
+            value={props.period}
             exclusive
-            onChange={handlePeriod}
+            onChange={props.handlePeriod}
             aria-label="time period"
           >
-            <ToggleButton className={classes.toggleButton} value={1} aria-label="one second">
-              1s
-            </ToggleButton>
             <ToggleButton className={classes.toggleButton} value={5} aria-label="five seconds">
               5s
             </ToggleButton>

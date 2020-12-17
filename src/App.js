@@ -1,36 +1,11 @@
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import AppBarComponent from './Components/AppBarComponent';
 import MarketComponent from './Components/MarketComponent';
 import React, { useState, useEffect } from 'react';
-import { Container, Grid, Paper } from '@material-ui/core';
-import CssBaseline from '@material-ui/core/CssBaseline';
-
-// See https://material-ui.com/es/customization/palette/
-const theme = createMuiTheme({
-  palette: {
-    type: 'dark',
-    primary: {
-      main: "#5B764D",
-      contrastText: "#F2F2F2"
-    },
-    secondary: {
-      main: "#708C5D",
-      contrastText: "#F2F2F2"
-    }
-  },
-  typography: {
-    useNextVariants: true,
-    palette: {
-      primary: "#F2F2F2"
-    }
-  },
-  root: {
-    display: 'flex',
-  },
-});
+import { Container } from '@material-ui/core';
 
 function App() {
   const [_markets, setMarkets] = useState([]);
+  const [_period, setPeriod] = React.useState(10);
 
   useEffect(() => {
     fetch("https://api.bitso.com/v3/available_books/")
@@ -49,23 +24,23 @@ function App() {
           }));
           setMarkets(markets);
         },
-        (error) => {
-          // setIsLoaded(true);
-          // setError(error);
-        }
+        (error) => { }
       )
   }, [])
 
+  const handlePeriod = (event, newPeriod) => {
+    setPeriod(newPeriod);
+  };
+
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <AppBarComponent />
+    <div>
+      <AppBarComponent handlePeriod={handlePeriod} period={_period} />
       <Container >
         {_markets.map((market) => (
-          <MarketComponent key={market.name} market={market.name} books={market.books} />
+          <MarketComponent key={market.name} market={market.name} books={market.books} period={_period} />
         ))}
       </Container>
-    </ThemeProvider >
+    </div>
   );
 }
 

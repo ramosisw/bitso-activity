@@ -1,10 +1,39 @@
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import CssBaseline from '@material-ui/core/CssBaseline';
 import reportWebVitals from './reportWebVitals';
 
+// See https://material-ui.com/es/customization/palette/
+const theme = createMuiTheme({
+  palette: {
+    type: 'dark',
+    primary: {
+      main: "#5B764D",
+      contrastText: "#F2F2F2"
+    },
+    secondary: {
+      main: "#708C5D",
+      contrastText: "#F2F2F2"
+    }
+  },
+  typography: {
+    useNextVariants: true,
+    palette: {
+      primary: "#F2F2F2"
+    }
+  },
+  root: {
+    display: 'flex',
+  },
+});
+
 ReactDOM.render(
-  <App />,
+  <ThemeProvider theme={theme}>
+    <CssBaseline />
+    <App />
+  </ThemeProvider>,
   document.getElementById('root')
 );
 
